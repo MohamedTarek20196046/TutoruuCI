@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 public class BookSession {
 	@Test
 	public void Book() {
-		//acomments
 		ChromeOptions o = new ChromeOptions();
 		o.addArguments("headless");
 		WebDriver driver = new ChromeDriver(o);
