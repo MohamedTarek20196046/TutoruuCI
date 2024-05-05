@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="SocialPages(failed)">
+    <classes>
+      <class name="TestComponents.SocialPages">
+        <methods>
+          <include name="CheckPages"/>
+        </methods>
+      </class> <!-- TestComponents.SocialPages -->
+    </classes>
+  </test> <!-- SocialPages(failed) -->
+  <test thread-count="5" parallel="tests" name="Search(failed)">
+    <classes>
+      <class name="TestComponents.Search">
+        <methods>
+          <include name="Search"/>
+        </methods>
+      </class> <!-- TestComponents.Search -->
+    </classes>
+  </test> <!-- Search(failed) -->
+</suite> <!-- Failed suite [Suite] -->
