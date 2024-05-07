@@ -33,7 +33,7 @@ public class Search {
 	}
 
 	public void SearchByDay(WebDriver driver) {
-		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.findElement(By.cssSelector("a[href=\"/tutors\"] p")).click();
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.bg-primary-500")));
 		driver.findElements(By.cssSelector("span.icon-chevron-down")).get(0).click();
@@ -55,7 +55,7 @@ public class Search {
 	}
 
 	public void SearchByPrice(WebDriver driver) throws InterruptedException {
-		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.findElement(By.cssSelector("a[href=\"/tutors\"] p")).click();
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.bg-primary-500")));
 		driver.findElements(By.cssSelector("span.icon-chevron-down")).get(1).click();
@@ -75,7 +75,7 @@ public class Search {
 	}
 
 	public void SearchByName(WebDriver driver) throws InterruptedException {
-		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.findElement(By.cssSelector("a[href=\"/tutors\"] p")).click();
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.bg-primary-500")));
 		driver.findElement(By.cssSelector("input#search")).sendKeys("tutor1");
@@ -90,7 +90,7 @@ public class Search {
 	}
 
 	public void SearchByNameAndPrice(WebDriver driver) throws InterruptedException {
-		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.findElement(By.cssSelector("a[href=\"/tutors\"] p")).click();
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a.bg-primary-500")));
 		driver.findElement(By.cssSelector("input#search")).sendKeys("Nour");

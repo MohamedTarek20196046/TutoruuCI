@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="BookSession(failed)">
-    <classes>
-      <class name="TestComponents.BookSession">
-        <methods>
-          <include name="Book"/>
-        </methods>
-      </class> <!-- TestComponents.BookSession -->
-    </classes>
-  </test> <!-- BookSession(failed) -->
-  <test thread-count="5" parallel="tests" name="Search(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Search(failed)">
     <classes>
       <class name="TestComponents.Search">
         <methods>
@@ -19,4 +10,13 @@
       </class> <!-- TestComponents.Search -->
     </classes>
   </test> <!-- Search(failed) -->
+  <test thread-count="5" name="BookSession(failed)">
+    <classes>
+      <class name="TestComponents.BookSession">
+        <methods>
+          <include name="Book"/>
+        </methods>
+      </class> <!-- TestComponents.BookSession -->
+    </classes>
+  </test> <!-- BookSession(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 07 12:36:05 EEST 2024</td>
+<td>Started on:</td><td>Tue May 07 12:48:01 EEST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20202 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9947 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -85,12 +85,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.ArrayList.get(ArrayList.java:427)
 	at TestComponents.BookSession.Book(BookSession.java:25)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace651191360", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace651191360'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace173431997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace173431997'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
 	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
@@ -113,15 +109,21 @@ function toggleAllBoxes() {
 	at org.testng.TestRunner.privateRun(TestRunner.java:848)
 	at org.testng.TestRunner.run(TestRunner.java:621)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>20</td>
-<td>TestComponents.BookSession@1a942c18</td></tr>
+<td>9</td>
+<td>TestComponents.BookSession@11392934</td></tr>
 </table><p>
 </body>
 </html>
