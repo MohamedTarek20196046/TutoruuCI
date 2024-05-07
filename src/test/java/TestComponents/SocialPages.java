@@ -26,10 +26,41 @@ public class SocialPages {
 		driver.manage().window().maximize();
 		driver.get("https://www.tutoruu.com/");
 		a.scrollToElement(driver.findElement(By.cssSelector("a[href=\"https://www.instagram.com/tutoruu.eg/\"]"))).build().perform();
+		goToInstagram(driver);
+		goToFacebook(driver);
+		goToLinkedIn(driver);
+		System.out.println("Socail pages test was successfull");
+		driver.quit();
+	}
+	
+	public void goToInstagram(WebDriver driver)
+	{
 		driver.findElement(By.cssSelector("a[href=\"https://www.instagram.com/tutoruu.eg/\"]")).click();
-		driver.findElement(By.cssSelector("a[href=\"https://eg.linkedin.com/company/tutoruu\"]")).click();
+		String p =navigation(driver);
+		System.out.println("Instagram Navigation passed");
+		driver.close();
+		driver.switchTo().window(p);
+	}
+	
+	public void goToFacebook(WebDriver driver)
+	{
 		driver.findElement(By.cssSelector("a[href=\"https://www.facebook.com/Tutoruu/\"]")).click();
-		System.out.println(driver.getTitle());
+		String p =navigation(driver);
+		System.out.println("Facebook Navigation passed");
+		driver.close();
+		driver.switchTo().window(p);
+	}
+	
+	public void goToLinkedIn(WebDriver driver)
+	{
+		driver.findElement(By.cssSelector("a[href=\"https://eg.linkedin.com/company/tutoruu\"]")).click();
+		String p =navigation(driver);
+		System.out.println("LinkedIn Navigation passed");
+		driver.close();
+		driver.switchTo().window(p);
+	}
+	public String navigation(WebDriver driver)
+	{
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> itr=windows.iterator();
 		String parent = itr.next();
@@ -38,16 +69,13 @@ public class SocialPages {
 		{
 			child = itr.next();
 			driver.switchTo().window(child);
-			System.out.println(driver.getTitle());
 			if(driver.getTitle().equals("Tutoruu | LinkedIn")||driver.getTitle().equals("Tutoruu (@tutoruu.eg) • Instagram photos and videos")||driver.getTitle().equals("Tutoruu | Facebook")) {
 				continue;
 			}else {
 				Assert.assertTrue(false);
 			}
 		}
-		System.out.println("success");
-		driver.quit();
+		return parent;
 	}
-	
 	
 }

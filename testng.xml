@@ -21,15 +21,26 @@
 		</classes>
 	</test> <!--
 	Test -->
-	 <!--
+	<!--
 	Test -->
 	<test thread-count="5" name="NavigateToApp">
 		<classes>
 			<class name="TestComponents.NavigateToApp" />
 		</classes>
-	</test> <!--
+	</test>
+	<test thread-count="5" name="Search">
+		<classes>
+			<class name="TestComponents.Search" />
+		</classes>
+	</test> 
+	<test thread-count="5" name="SocialPages">
+		<classes>
+			<class name="TestComponents.SocialPages" />
+		</classes>
+	</test> 
+	<!--
 	Test -->
-	 <!--
+	<!--
 	Test -->
 </suite> <!--
 Suite -->

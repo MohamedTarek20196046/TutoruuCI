@@ -22,7 +22,7 @@ public class NavigateToApp {
 			driver.get("https://www.tutoruu.com/");
 			driver.findElement(By.cssSelector("button[text=\"Download the App now\"]")).click();
 			if (driver.findElement(By.xpath("(//img[@alt='logo'])[3]")).isDisplayed() == true) {
-				System.out.println("qr code appears");
+				System.out.println("Navigation test is successfull");
 				driver.quit();
 			} else
 			{

@@ -44,7 +44,7 @@ public class Chatbot {
 		}
 		if(driver.findElements(By.cssSelector("h2.text-current")).get(1).isDisplayed())
 		{
-			System.out.println("success");
+			System.out.println("Chatbot test was success");
 			driver.quit();
 		}else {
 			Assert.assertTrue(false);

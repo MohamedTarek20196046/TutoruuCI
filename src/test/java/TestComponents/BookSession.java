@@ -1,6 +1,7 @@
 package TestComponents;
 import java.time.Duration;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -34,8 +35,13 @@ public class BookSession {
 		a.scrollToElement(driver.findElement(By.tagName("textarea"))).build().perform();
 		driver.findElement(By.tagName("textarea")).sendKeys("this is an automation test booking");
 		driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-		System.out.println("success");
-		driver.quit();
+		if(driver.findElement(By.cssSelector("div.json-formatter-container")).isDisplayed()) {
+			System.out.println("Navigated to Payment test successfully");
+			driver.quit();
+		}else {
+			Assert.assertTrue(false);
+		}
+		
 	}
 	
 }

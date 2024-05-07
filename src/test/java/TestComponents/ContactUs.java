@@ -32,7 +32,7 @@ public class ContactUs {
 		driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-title=\"\"]")));
 		if (driver.findElement(By.cssSelector("div[data-title=\"\"]")).isDisplayed()) {
-			System.out.println("success");
+			System.out.println("ContactUs test was success");
 			driver.quit();
 		} else {
 			Assert.assertTrue(false);
