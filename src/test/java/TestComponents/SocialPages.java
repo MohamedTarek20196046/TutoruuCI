@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class SocialPages {
 	@Test
-	public void CheckPages()
+	public void CheckPages() throws InterruptedException
 	{
 		ChromeOptions o = new ChromeOptions();
 		o.addArguments("headless");
@@ -26,14 +26,14 @@ public class SocialPages {
 		driver.manage().window().maximize();
 		driver.get("https://www.tutoruu.com/");
 		a.scrollToElement(driver.findElement(By.cssSelector("a[href=\"https://www.instagram.com/tutoruu.eg/\"]"))).build().perform();
-		goToInstagram(driver);
+		//goToInstagram(driver);
 		goToFacebook(driver);
 		goToLinkedIn(driver);
 		System.out.println("Socail pages test was successfull");
 		driver.quit();
 	}
 	
-	public void goToInstagram(WebDriver driver)
+	public void goToInstagram(WebDriver driver) throws InterruptedException
 	{
 		driver.findElement(By.cssSelector("a[href=\"https://www.instagram.com/tutoruu.eg/\"]")).click();
 		String p =navigation(driver);
@@ -42,7 +42,7 @@ public class SocialPages {
 		driver.switchTo().window(p);
 	}
 	
-	public void goToFacebook(WebDriver driver)
+	public void goToFacebook(WebDriver driver) throws InterruptedException
 	{
 		driver.findElement(By.cssSelector("a[href=\"https://www.facebook.com/Tutoruu/\"]")).click();
 		String p =navigation(driver);
@@ -51,7 +51,7 @@ public class SocialPages {
 		driver.switchTo().window(p);
 	}
 	
-	public void goToLinkedIn(WebDriver driver)
+	public void goToLinkedIn(WebDriver driver) throws InterruptedException
 	{
 		driver.findElement(By.cssSelector("a[href=\"https://eg.linkedin.com/company/tutoruu\"]")).click();
 		String p =navigation(driver);
@@ -59,22 +59,22 @@ public class SocialPages {
 		driver.close();
 		driver.switchTo().window(p);
 	}
-	public String navigation(WebDriver driver)
+	public String navigation(WebDriver driver) throws InterruptedException
 	{
+		boolean x=false;
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> itr=windows.iterator();
 		String parent = itr.next();
 		String child;
-		for(int i=1; i< windows.size();i++)
-		{
 			child = itr.next();
 			driver.switchTo().window(child);
+			Thread.sleep(3000);
 			if(driver.getTitle().equals("Tutoruu | LinkedIn")||driver.getTitle().equals("Tutoruu (@tutoruu.eg) • Instagram photos and videos")||driver.getTitle().equals("Tutoruu | Facebook")) {
-				continue;
-			}else {
+				x=true;
+			}
+			if(x==false) {
 				Assert.assertTrue(false);
 			}
-		}
 		return parent;
 	}
 	

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestComponents.BookSession" class="method navigator-link" hash-for-method="Book">Book</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestComponents.Search" class="method navigator-link" hash-for-method="Search">Search</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,12 +103,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestComponents.BookSession" class="method navigator-link" hash-for-method="Book">Book</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestComponents.SocialPages" class="method navigator-link" hash-for-method="CheckPages">CheckPages</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestComponents.ContactUs" class="method navigator-link" hash-for-method="Contact">Contact</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestComponents.Search" class="method navigator-link" hash-for-method="Search">Search</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -152,59 +143,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestComponents.Search</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Search">
-                  </a> <!-- Search -->
-                  <span class="method-name">Search</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a.bg-primary-500 (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\moham\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60781}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60781/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 87952ad69dce4ab4dade3a92040d4e3c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at TestComponents.Search.SearchByDay(Search.java:38)
-	at TestComponents.Search.Search(Search.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestComponents.BookSession</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Book">
-                  </a> <!-- Book -->
-                  <span class="method-name">Book</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at TestComponents.BookSession.Book(BookSession.java:25)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -231,6 +169,36 @@ Session ID: 87952ad69dce4ab4dade3a92040d4e3c
                   <a name="CheckPages">
                   </a> <!-- CheckPages -->
                   <span class="method-name">CheckPages</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestComponents.Search</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Search">
+                  </a> <!-- Search -->
+                  <span class="method-name">Search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestComponents.BookSession</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Book">
+                  </a> <!-- Book -->
+                  <span class="method-name">Book</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -274,37 +242,37 @@ Session ID: 87952ad69dce4ab4dade3a92040d4e3c
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Contact&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Contact&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestComponents.ContactUs&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Contact --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Chatbot&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Chatbot&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestComponents.Chatbot&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Chatbot --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;SocialPages&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;TestComponents.SocialPages&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- SocialPages --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;NavigateToApp&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;TestComponents.NavigateToApp&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- NavigateToApp --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Search&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;TestComponents.Search&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Search --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;BookSession&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;BookSession&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestComponents.BookSession&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- BookSession --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;NavigateToApp&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestComponents.NavigateToApp&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- NavigateToApp --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Search&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestComponents.Search&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Search --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;SocialPages&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestComponents.SocialPages&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SocialPages --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -322,7 +290,7 @@ Session ID: 87952ad69dce4ab4dade3a92040d4e3c
                 <span class="test-name">Chatbot (1 class)</span>
               </li>
               <li>
-                <span class="test-name">SocialPages (1 class)</span>
+                <span class="test-name">BookSession (1 class)</span>
               </li>
               <li>
                 <span class="test-name">NavigateToApp (1 class)</span>
@@ -331,7 +299,7 @@ Session ID: 87952ad69dce4ab4dade3a92040d4e3c
                 <span class="test-name">Search (1 class)</span>
               </li>
               <li>
-                <span class="test-name">BookSession (1 class)</span>
+                <span class="test-name">SocialPages (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -361,32 +329,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Search')
 data.setCell(0, 2, 'TestComponents.Search')
-data.setCell(0, 3, 16106);
+data.setCell(0, 3, 38105);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Book')
 data.setCell(1, 2, 'TestComponents.BookSession')
-data.setCell(1, 3, 9942);
+data.setCell(1, 3, 21066);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'CheckPages')
 data.setCell(2, 2, 'TestComponents.SocialPages')
-data.setCell(2, 3, 9930);
+data.setCell(2, 3, 16780);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Contact')
-data.setCell(3, 2, 'TestComponents.ContactUs')
-data.setCell(3, 3, 6752);
+data.setCell(3, 1, 'chat')
+data.setCell(3, 2, 'TestComponents.Chatbot')
+data.setCell(3, 3, 14284);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'chat')
-data.setCell(4, 2, 'TestComponents.Chatbot')
-data.setCell(4, 3, 5610);
+data.setCell(4, 1, 'Contact')
+data.setCell(4, 2, 'TestComponents.ContactUs')
+data.setCell(4, 3, 11698);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'navigate')
 data.setCell(5, 2, 'TestComponents.NavigateToApp')
-data.setCell(5, 3, 2781);
+data.setCell(5, 3, 9898);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -422,39 +390,35 @@ return data;
               <div class="chronological-class-name">TestComponents.Chatbot</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">chat</span>
-                <span class="method-start">7048 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">TestComponents.SocialPages</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestComponents.BookSession</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">CheckPages</span>
-                <span class="method-start">12672 ms</span>
+                <span class="method-name">Book</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestComponents.NavigateToApp</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">navigate</span>
-                <span class="method-start">22608 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestComponents.Search</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Search</span>
-                <span class="method-start">25409 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">TestComponents.BookSession</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestComponents.SocialPages</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">Book</span>
-                <span class="method-start">41546 ms</span>
+                <span class="method-name">CheckPages</span>
+                <span class="method-start">10104 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

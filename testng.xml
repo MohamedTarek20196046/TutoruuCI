@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite  name="Suite">
+<suite parallel="tests" name="Suite">
 	<test thread-count="5" name="Contact">
 		<classes>
 			<class name="TestComponents.ContactUs" />
@@ -11,14 +11,15 @@
 		<classes>
 			<class name="TestComponents.Chatbot" />
 		</classes>
-	</test>
-	<test thread-count="5" name="SocialPages">
-		<classes>
-			<class name="TestComponents.SocialPages" />
-		</classes>
 	</test> <!--
 	Test -->
-	 <!--
+	<test thread-count="5" name="BookSession">
+		<classes>
+
+			<class name="TestComponents.BookSession" />
+
+		</classes>
+	</test> <!--
 	Test -->
 	<!--
 	Test -->
@@ -32,14 +33,11 @@
 			<class name="TestComponents.Search" />
 		</classes>
 	</test> 
-	 
-	<test thread-count="5" name="BookSession">
+	<test thread-count="5" name="SocialPages">
 		<classes>
-
-			<class name="TestComponents.BookSession" />
-
+			<class name="TestComponents.SocialPages" />
 		</classes>
-	</test>
+	</test> 
 	<!--
 	Test -->
 	<!--
