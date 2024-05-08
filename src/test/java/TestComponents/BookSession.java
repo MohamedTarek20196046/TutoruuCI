@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class BookSession {
 	@Test
-	public void Book() {
+	public void Book() throws InterruptedException {
 		ChromeOptions o = new ChromeOptions();
 		o.addArguments("headless");
 		WebDriver driver = new ChromeDriver(o);
@@ -35,6 +35,7 @@ public class BookSession {
 		a.scrollToElement(driver.findElement(By.tagName("textarea"))).build().perform();
 		driver.findElement(By.tagName("textarea")).sendKeys("this is an automation test booking");
 		driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+		Thread.sleep(3000);
 		if(driver.findElement(By.cssSelector("div.json-formatter-container")).isDisplayed()) {
 			System.out.println("Navigated to Payment test successfully");
 			driver.quit();
